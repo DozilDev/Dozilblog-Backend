@@ -86,5 +86,8 @@
   "eslintConfig": {
     "extends": "@adonisjs/eslint-config/app"
   },
-  "prettier": "@adonisjs/prettier-config"
+  "prettier": "@adonisjs/prettier-config",
+  "engines": {
+    "node": "20.6.0"
+  }
 }
