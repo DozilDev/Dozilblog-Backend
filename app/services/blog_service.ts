@@ -65,6 +65,7 @@ export default class BlogService {
   public async updateBlog(id: string, payload: BlogPayload, bouncer: AppBouncer): Promise<Blog> {
     const blog = await Blog.findByOrFail({ id })
     // await this.policies(bouncer, blog, 'update')
+    console.log(this.policies, bouncer, 'update')
     blog.merge(payload)
     blog.related('categories').sync(payload.categories)
     blog.related('tags').sync(payload.tags)
