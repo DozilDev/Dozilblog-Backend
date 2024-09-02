@@ -88,6 +88,6 @@
   },
   "prettier": "@adonisjs/prettier-config",
   "engines": {
-    "node": "20.6.0"
+    "node": "20.12.2"
   }
 }
