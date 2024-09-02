@@ -26,7 +26,7 @@ router
         router.delete('/:id', [userController, 'delete'])
       })
       .prefix('/users')
-      .use(middleware.auth())
+      .use(middleware.guest())
 
     router
       .group(() => {
@@ -37,7 +37,7 @@ router
         router.delete('/:id', [categoryController, 'delete'])
       })
       .prefix('/categories')
-      .use(middleware.auth())
+      .use(middleware.guest())
 
     router
       .group(() => {
@@ -48,7 +48,7 @@ router
         router.delete('/:id', [tagsController, 'delete'])
       })
       .prefix('/tags')
-      .use(middleware.auth())
+      .use(middleware.guest())
 
     router
       .group(() => {
@@ -59,7 +59,7 @@ router
         router.delete('/:id', [blogController, 'delete'])
       })
       .prefix('/blogs')
-      .use(middleware.auth())
+      .use(middleware.guest())
   })
   .prefix('/api/v1')
 
